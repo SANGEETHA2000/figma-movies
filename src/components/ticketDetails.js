@@ -6,6 +6,7 @@ import screen from '../assets/ticketDetails/Group 29.png';
 import ellipse from '../assets/ticketDetails/Ellipse 4.png';
 import plus from '../assets/ticketDetails/Group 38.png';
 import minus from '../assets/ticketDetails/Group 39.png';
+import check from '../assets/ticketDetails/check 3.png';
 
 const TicketDetails = () => {
     return (
@@ -155,6 +156,7 @@ const TicketDetails = () => {
                     <img src={arrow1} alt="arrow1"/>
                 </button>
             </div>
+            <img src={check} alt="check" className='absolute top-9 z-30' style={{ left: '132px' }}/>
         </div>
     )
     
