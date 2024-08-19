@@ -15,14 +15,17 @@ const BuyTickets = () => {
     const onNextClicked = () => {
         navigate('/ticket-details')
     }
+    const onBackClicked = () => {
+        navigate('/movie-details')
+    }
 
     return (
         <div className='flex flex-col border justify-between relative' style={{ backgroundColor:'#0D0D0F', backgroundImage: `url(${homeBackground})`, height: '852px', width: '393px', fontFamily: "Inter" }}>
             <div className='flex flex-col gap-5 p-6'>
                 <div className='flex flex-row gap-16 items-center'>
-                    <div className='h-9 w-9 rounded-xl flex items-center justify-center bg-white'>
+                    <button className='h-9 w-9 rounded-xl flex items-center justify-center bg-white' onClick={onBackClicked}>
                         <img src={vector} alt='back'/>
-                    </div>
+                    </button>
                     <img src={pageNumber} alt='pageno' className='h-7 w-36'/>
                 </div>
                 <img src={buyTickets1} alt="buyTickets1" className='rounded-xl'/>

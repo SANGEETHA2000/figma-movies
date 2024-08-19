@@ -15,15 +15,17 @@ const TicketDetails = () => {
     const onPaymentClicked = () => {
         navigate('/payment-status')
     }
-
+    const onBackClicked = () => {
+        navigate('/buy-tickets')
+    }
 
     return (
         <div className='flex relative' style={{ backgroundImage: 'linear-gradient(#0D0D0F, #110F15, #1D172E)', height: '852px', width: '393px', fontFamily: "Inter" }}>
             <div className='flex flex-col p-6 text-white z-10'>
                 <div className='flex flex-row gap-16 items-center pb-6'>
-                    <div className='h-9 w-9 rounded-xl flex items-center justify-center bg-white'>
+                    <button className='h-9 w-9 rounded-xl flex items-center justify-center bg-white' onClick={onBackClicked}>
                         <img src={vector} alt='back'/>
-                    </div>
+                    </button>
                     <img src={pageNumber} alt='pageno' className='h-7 w-36'/>
                 </div>
                 <img src={screen} alt='screen' className='pb-8'/>

@@ -18,14 +18,17 @@ const MovieDetails = () => {
     const onBuyNowClicked = () => {
         navigate('/buy-tickets')
     }
+    const onBackClicked = () => {
+        navigate('/home')
+    }
 
     return (
         <div className='flex flex-col border relative' style={{ backgroundColor:'#0D0D0F', height: '852px', width: '393px', fontFamily: "Inter" }}>           
             <div className='flex flex-col z-10 px-6 py-8 gap-5'>
                 <div className='flex flex-row justify-between'>
-                    <div className='h-9 w-9 rounded-xl flex items-center justify-center bg-white'>
+                    <button className='h-9 w-9 rounded-xl flex items-center justify-center bg-white' onClick={onBackClicked}>
                         <img src={vector} alt='back'/>
-                    </div>
+                    </button>
                     <div className='h-9 w-9 rounded-full flex items-center justify-center' style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}>
                         <img src={favouriteIcon} alt='back'/>
                     </div>
