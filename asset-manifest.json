@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/figma-movies/static/css/main.3a8c5f33.css",
+    "main.js": "/figma-movies/static/js/main.c5ba4e7c.js",
+    "static/js/453.f6b317be.chunk.js": "/figma-movies/static/js/453.f6b317be.chunk.js",
+    "static/media/home_background.png": "/figma-movies/static/media/home_background.a8baf5ea8947eaf8ae4f.png",
+    "static/media/login_background.png": "/figma-movies/static/media/login_background.7872270e925027f485d3.png",
+    "static/media/image 2.png": "/figma-movies/static/media/image 2.5a2087baf3a7775813ae.png",
+    "static/media/image 1.png": "/figma-movies/static/media/image 1.0915ad420363b2894ec2.png",
+    "static/media/image 3-1.png": "/figma-movies/static/media/image 3-1.3e3f29eff94f70c6b6af.png",
+    "static/media/image 4.png": "/figma-movies/static/media/image 4.e76e63cd68f4242d5e76.png",
+    "static/media/image 3-4.png": "/figma-movies/static/media/image 3-4.ad45a7c74e2a5477ad30.png",
+    "static/media/image 3-3.png": "/figma-movies/static/media/image 3-3.89838eab246a6efd156c.png",
+    "static/media/Group 68.png": "/figma-movies/static/media/Group 68.e31f747f07df023c38f2.png",
+    "static/media/image 3.png": "/figma-movies/static/media/image 3.84042d25d1c31b3705aa.png",
+    "static/media/Rectangle 89.png": "/figma-movies/static/media/Rectangle 89.baeaed7770ed2b4d26d9.png",
+    "static/media/image 3-2.png": "/figma-movies/static/media/image 3-2.740002f468025082b710.png",
+    "static/media/Group 12.png": "/figma-movies/static/media/Group 12.7a8fae0c910d74ec82f7.png",
+    "static/media/image 1-1.png": "/figma-movies/static/media/image 1-1.716fe9069740cdc1e951.png",
+    "static/media/image 3-5.png": "/figma-movies/static/media/image 3-5.778c0f06c2730a84bb72.png",
+    "index.html": "/figma-movies/index.html",
+    "main.3a8c5f33.css.map": "/figma-movies/static/css/main.3a8c5f33.css.map",
+    "main.c5ba4e7c.js.map": "/figma-movies/static/js/main.c5ba4e7c.js.map",
+    "453.f6b317be.chunk.js.map": "/figma-movies/static/js/453.f6b317be.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3a8c5f33.css",
+    "static/js/main.c5ba4e7c.js"
+  ]
+}
