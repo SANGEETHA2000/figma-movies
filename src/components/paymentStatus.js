@@ -3,8 +3,19 @@ import pageNumber from '../assets/paymentStatus/Group 16.png';
 import success from '../assets/paymentStatus/checked 1.png';
 import paymentBg from '../assets/paymentStatus/Group 12.png';
 import check from '../assets/paymentStatus/check 3.png';
+import { useNavigate } from 'react-router-dom';
 
-const TicketDetails = () => {
+const PaymentStatus = () => {
+
+    const navigate = useNavigate();
+    const onViewTicketClicked = () => {
+        navigate('/view-ticket')
+    }
+
+    const onHomeClicked = () => {
+        navigate('/home')
+    }
+
     return (
         <div className='flex flex-col p-6 text-white relative justify-between items-center' style={{ backgroundImage: 'linear-gradient(#0D0D0F, #110F15, #1D172E, #1E1731)', height: '852px', width: '393px', fontFamily: "Inter" }}>
             <div>
@@ -16,10 +27,10 @@ const TicketDetails = () => {
                 <span className='text-xs text-center px-5'>We have sent a copy of your ticket to your e-mail address. You can check your ticket in the My Tickets section on the homepage.</span>
             </div>
             <div className='items-center justify-center flex flex-col gap-4 pb-14'>
-                <button className='rounded-xl flex flex-row items-center pl-12 pr-6 gap-32 justify-center' style={{ backgroundColor: 'rgba(67, 46, 137)', height : '45px', width: '351px', color:'white' }}>
+                <button className='rounded-xl flex flex-row items-center pl-12 pr-6 gap-32 justify-center' style={{ backgroundColor: 'rgba(67, 46, 137)', height : '45px', width: '351px', color:'white' }} onClick={onViewTicketClicked}>
                     <span>View Ticket</span>
                 </button>
-                <button className='rounded-xl flex flex-row items-center pl-12 pr-6 gap-32 justify-center' style={{ backgroundColor: 'rgba(16, 12, 27)', height : '45px', width: '351px', color:'white' }}>
+                <button className='rounded-xl flex flex-row items-center pl-12 pr-6 gap-32 justify-center' style={{ backgroundColor: 'rgba(16, 12, 27)', height : '45px', width: '351px', color:'white' }} onClick={onHomeClicked}>
                     <span>Back to Home</span>
                 </button>
             </div>
@@ -31,4 +42,4 @@ const TicketDetails = () => {
     )
 }
 
-export default TicketDetails;
+export default PaymentStatus;

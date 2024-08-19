@@ -7,6 +7,7 @@ import MovieDetails from './components/movieDetails';
 import BuyTickets from './components/buyTickets';
 import TicketDetails from './components/ticketDetails';
 import PaymentStatus from './components/paymentStatus';
+import ViewTicket from './components/viewTicket';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/buy-tickets" element={<BuyTickets />} />
           <Route path="/ticket-details" element={<TicketDetails />} />
           <Route path="/payment-status" element={<PaymentStatus />} />
+          <Route path="/view-ticket" element={<ViewTicket />} />
         </Routes>
       </BrowserRouter>
     </div>
