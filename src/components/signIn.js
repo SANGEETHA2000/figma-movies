@@ -1,6 +1,12 @@
 import React from 'react';
 import loginBackground from '../assets/login_background.png';
+import { useNavigate } from 'react-router-dom';
+
 const SignIn = () => {
+    const navigate = useNavigate();
+    const onSignInClicked = () => {
+        navigate('/home')
+    }
     
     return (
         <div className='flex flex-col border' style={{ backgroundImage: `url(${loginBackground})`, height: '852px', width: '393px', fontFamily: "Inter" }}>
@@ -14,7 +20,7 @@ const SignIn = () => {
                 <input type="email" placeholder='E-mail' className='rounded-xl px-4 text-xl opacity-80' style={{ height : '57px', width: '351px', color: "rgba(255, 255, 255, 0.27)", backgroundColor: '#282729' }}/>
                 <input type="password" placeholder='Password' className='rounded-xl px-4 text-xl opacity-80' style={{ height : '57px', width: '351px', color: "rgba(255, 255, 255, 0.27)", backgroundColor: '#282729' }}/>
                 <div className='p-5'>
-                    <button className='rounded-xl' style={{ backgroundColor: 'rgba(108, 71, 219, 0.4)', height : '57px', width: '351px', color:'white' }}>
+                    <button className='rounded-xl' style={{ backgroundColor: 'rgba(108, 71, 219, 0.4)', height : '57px', width: '351px', color:'white' }} onClick={onSignInClicked}>
                         <span className='text-xl'>Sign In</span>
                     </button>
                 </div>

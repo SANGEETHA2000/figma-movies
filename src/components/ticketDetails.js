@@ -7,8 +7,16 @@ import ellipse from '../assets/ticketDetails/Ellipse 4.png';
 import plus from '../assets/ticketDetails/Group 38.png';
 import minus from '../assets/ticketDetails/Group 39.png';
 import check from '../assets/ticketDetails/check 3.png';
+import { useNavigate } from 'react-router-dom';
 
 const TicketDetails = () => {
+
+    const navigate = useNavigate();
+    const onPaymentClicked = () => {
+        navigate('/payment-status')
+    }
+
+
     return (
         <div className='flex relative' style={{ backgroundImage: 'linear-gradient(#0D0D0F, #110F15, #1D172E)', height: '852px', width: '393px', fontFamily: "Inter" }}>
             <div className='flex flex-col p-6 text-white z-10'>
@@ -151,7 +159,7 @@ const TicketDetails = () => {
                 </div>
             </div>
             <div className='h-28 bg-black items-center justify-center flex z-20 px-5 py-8 absolute bottom-0 left-0'>
-                <button className='rounded-xl bg-transparent flex flex-row items-center pl-12 pr-6 gap-20 justify-end' style={{ backgroundColor: 'rgba(108, 71, 219)', height : '57px', width: '351px', color:'white' }}>
+                <button className='rounded-xl bg-transparent flex flex-row items-center pl-12 pr-6 gap-20 justify-end' style={{ backgroundColor: 'rgba(108, 71, 219)', height : '57px', width: '351px', color:'white' }} onClick={onPaymentClicked}>
                     <span className='font-semibold text-lg'>Payment Options</span>
                     <img src={arrow1} alt="arrow1"/>
                 </button>

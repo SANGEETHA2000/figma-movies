@@ -6,8 +6,16 @@ import pageNumber from '../assets/buyTickets/Group 16.png';
 import exchange from '../assets/buyTickets/exchange 1.png';
 import arrow2 from '../assets/buyTickets/Arrow 1.png';
 import arrow1 from '../assets/buyTickets/Arrow 2.png';
+import { useNavigate } from 'react-router-dom';
+
 
 const BuyTickets = () => {
+
+    const navigate = useNavigate();
+    const onNextClicked = () => {
+        navigate('/ticket-details')
+    }
+
     return (
         <div className='flex flex-col border justify-between relative' style={{ backgroundColor:'#0D0D0F', backgroundImage: `url(${homeBackground})`, height: '852px', width: '393px', fontFamily: "Inter" }}>
             <div className='flex flex-col gap-5 p-6'>
@@ -40,7 +48,7 @@ const BuyTickets = () => {
                 </button>
             </div>
             <div className='h-24 bg-black items-center justify-center flex'>
-                <button className='rounded-xl bg-transparent flex flex-row items-center pl-12 pr-6 gap-32 justify-end' style={{ backgroundColor: 'rgba(108, 71, 219, 0.25)', height : '57px', width: '351px', color:'white' }}>
+                <button className='rounded-xl bg-transparent flex flex-row items-center pl-12 pr-6 gap-32 justify-end' style={{ backgroundColor: 'rgba(108, 71, 219, 0.25)', height : '57px', width: '351px', color:'white' }} onClick={onNextClicked}>
                     <span className='font-semibold opacity-30 text-lg'>Next</span>
                     <img src={arrow2} alt="arrow2"/>
                 </button>

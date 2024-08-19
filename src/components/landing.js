@@ -1,6 +1,12 @@
 import React from 'react';
 import loginBackground from '../assets/login_background.png';
+import { useNavigate } from 'react-router-dom';
+
 const Landing = () => {
+    const navigate = useNavigate();
+    const onSignInClicked = () => {
+        navigate('/sign-in')
+    }
     
     return (
         <div className='flex flex-col border' style={{ backgroundImage: `url(${loginBackground})`, height: '852px', width: '393px', fontFamily: "Inter" }}>
@@ -11,7 +17,7 @@ const Landing = () => {
                 </div>
             </div>
             <div className='flex flex-col justify-center items-center gap-4 pb-8' style={{ backgroundColor: 'rgba(49, 33, 99, 0.2)', height: '28%' }}>
-                <button className='rounded-xl' style={{ backgroundColor: 'rgba(108, 71, 219, 0.4)', height : '57px', width: '351px', color:'white' }}>
+                <button className='rounded-xl' style={{ backgroundColor: 'rgba(108, 71, 219, 0.4)', height : '57px', width: '351px', color:'white' }} onClick={onSignInClicked}>
                     <span className='text-xl'>Sign In</span>
                 </button>
                 <div className='flex flex-row opacity-40'>
@@ -19,7 +25,7 @@ const Landing = () => {
                     <span class="mx-2" style={{ lineHeight: "20px", fontSize: "15px", color: "white" }}>or</span>
                     <div className='flex self-center' style={{ backgroundColor: 'white', height: '1px', width: '135px'}}></div>
                 </div>
-                <button className='rounded-xl' style={{ backgroundColor: 'rgba(108, 71, 219, 0.4)', height : '57px', width: '351px', color:'white' }}>
+                <button className='rounded-xl' style={{ backgroundColor: 'rgba(108, 71, 219, 0.4)', height : '57px', width: '351px', color:'white' }} onClick={onSignInClicked}>
                     <span className='text-xl'>Sign Up</span>
                 </button>
             </div>        

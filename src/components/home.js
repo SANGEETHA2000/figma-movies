@@ -10,9 +10,14 @@ import homeImg5 from '../assets/home/image 3-3.png';
 import homeImg6 from '../assets/home/image 3-4.png';
 import homeImg7 from '../assets/home/image 3-5.png';
 import ellipse from '../assets/home/Ellipse 4.png'
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
-    
+    const navigate = useNavigate();
+    const onMovieClicked = () => {
+        navigate('/movie-details')
+    }
+
     return (
         <div className='flex flex-col border p-6 gap-10 relative' style={{ backgroundColor:'#0D0D0F', backgroundImage: `url(${homeBackground})`, height: '852px', width: '393px', fontFamily: "Inter" }}>
             <div className='flex flex-row justify-between items-center'>
@@ -31,10 +36,10 @@ const Home = () => {
                     <img src={ellipse} alt="ellipse" className='rounded-full h-2 w-2'/>
                     <span className='text-white'>Highlights</span>
                 </div>
-                <div>
+                <button onClick={onMovieClicked}>
                     <img src={homeImg1} alt="homeImg1" className='rounded-xl relative'/>
                     <span className='left-8 absolute font-semibold text-xl text-white' style={{ bottom: '545px' }}>Kung Fu Panda 4</span>
-                </div>
+                </button>
             </div>
             <div className='flex flex-col gap-2'>
                 <div className='flex flex-row justify-between'>
