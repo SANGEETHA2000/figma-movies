@@ -11,6 +11,9 @@ import homeImg6 from '../assets/home/image 3-4.png';
 import homeImg7 from '../assets/home/image 3-5.png';
 import ellipse from '../assets/home/Ellipse 4.png'
 import { useNavigate } from 'react-router-dom';
+import heart from '../assets/home/heart 1.png';
+import home from '../assets/home/Vector.png';
+import ticket from '../assets/home/Group 28.png';
 
 const Home = () => {
     const navigate = useNavigate();
@@ -68,7 +71,12 @@ const Home = () => {
                     <img src={homeImg6} alt="homeImg6" className='rounded-xl'/>
                     <img src={homeImg7} alt="homeImg7" className='rounded-l-xl'/>
                 </div>
-            </div> 
+            </div>
+            <div className='h-20 w-full items-center justify-between px-16 flex z-20 absolute bottom-0 left-0 rounded-t-full' style={{ backgroundColor: 'rgba(0,0,0,0.9)'}}>
+                <img src={heart} alt="heart" className=''/>
+                <img src={home} alt="home" className=''/>
+                <img src={ticket} alt="ticket" className=''/>
+            </div>
         </div>
     )
 }
