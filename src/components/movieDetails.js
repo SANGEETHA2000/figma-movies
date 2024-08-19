@@ -9,6 +9,7 @@ import imdb from '../assets/movieDetails/imdb 1.png';
 import ellipse from '../assets/movieDetails/Ellipse 4.png';
 import movieDetailsImage2 from '../assets/movieDetails/image 1.png';
 import movieDetailsImage3 from '../assets/movieDetails/image 1-1.png';
+import arrow from '../assets/movieDetails/Arrow 1.png';
 
 const MovieDetails = () => {
     
@@ -64,6 +65,12 @@ const MovieDetails = () => {
                         <img src={movieDetailsImage3} alt="movieDetailsImage3" className='rounded-l-xl'/>
                     </div>
                 </div>
+            </div>
+            <div className='h-20 items-center justify-center flex z-20 px-5 absolute bottom-0 left-0' style={{ backgroundColor: 'rgba(0, 0, 0, 0.85)'}}>
+                <button className='rounded-xl bg-transparent flex flex-row items-center pl-12 pr-6 gap-20 justify-end' style={{ backgroundColor: 'rgba(108, 71, 219)', height : '44px', width: '351px', color:'white' }}>
+                    <span className='font-semibold text-lg'>Buy Ticket Now</span>
+                    <img src={arrow} alt="arrow"/>
+                </button>
             </div>
         </div>
     )
