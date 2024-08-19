@@ -7,7 +7,7 @@ import ellipse from '../assets/ticketDetails/Ellipse 4.png';
 import plus from '../assets/ticketDetails/Group 38.png';
 import minus from '../assets/ticketDetails/Group 39.png';
 import check from '../assets/ticketDetails/check 3.png';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const TicketDetails = () => {
 
@@ -18,6 +18,8 @@ const TicketDetails = () => {
     const onBackClicked = () => {
         navigate('/buy-tickets')
     }
+    const location = useLocation();
+    const sessionName = location.state?.sessionName || '20.30 pm - 22.00pm';
 
     return (
         <div className='flex relative' style={{ backgroundImage: 'linear-gradient(#0D0D0F, #110F15, #1D172E)', height: '852px', width: '393px', fontFamily: "Inter" }}>
@@ -30,96 +32,96 @@ const TicketDetails = () => {
                 </div>
                 <img src={screen} alt='screen' className='pb-8'/>
                 <div className='grid grid-cols-12 gap-2 pb-8'>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
                     <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "#6C47DB" }}></button>
-                    <button className='col-start-11' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='col-start-12' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='col-start-11 pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='col-start-12 pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
                     <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "#6C47DB" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
                     <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "#6C47DB" }}></button>
                     <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "#6C47DB" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='col-start-11' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='col-start-12' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='col-start-11 pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='col-start-12 pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
                     <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "#C66E1D" }}></button>
                     <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "#C66E1D" }}></button>
-                    <button className='col-start-11' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='col-start-12' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='col-start-11 pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='col-start-12 pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
                     <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "#6C47DB" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
                     <button className='col-start-11' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "#6C47DB" }}></button>
-                    <button className='col-start-12' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='col-start-12 pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
                 </div>
                 <div className='grid grid-cols-12 gap-2 pb-8'>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='col-start-11' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='col-start-12' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none col-start-11' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none col-start-12' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
                     <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "#6C47DB" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='col-start-11' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='col-start-12' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none col-start-11' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none col-start-12' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
                     <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "#6C47DB" }}></button>
                     <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "#6C47DB" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
                     <button className='col-start-11' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "#6C47DB" }}></button>
                     <button className='col-start-12' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "#6C47DB" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='col-start-11' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
-                    <button className='col-start-12' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none col-start-11' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
+                    <button className='pointer-events-none col-start-12' style={{ width: '25px', height: '25px', borderRadius: '5px', backgroundColor: "rgba(255, 255, 255, 0.53)" }}></button>
                 </div>
                 <div className='flex flex-row gap-1 items-center'>
                     <img src={ellipse} alt="ellipse" className='rounded-full h-2 w-2'/>
@@ -148,7 +150,7 @@ const TicketDetails = () => {
                     <div className='flex flex-col gap-2 p-6' style={{ width: '65%' }}>
                         <span style={{ fontSize: '10px', color: 'rgba(255, 255, 255, 0.37)' }}>Movie: Kung Fu Panda 4</span>
                         <span className="pb-1" style={{ fontSize: '10px' }}>Ticket Count: 2 Adult <span style={{ color: '#33B528' }}>( $40 )</span></span>
-                        <span style={{ fontSize: '10px', color: 'rgba(255, 255, 255, 0.37)' }}>Session: 20.30 pm - 22.00pm</span>
+                        <span style={{ fontSize: '10px', color: 'rgba(255, 255, 255, 0.37)' }}>Session: {sessionName}</span>
                         <span className="pb-1" style={{ fontSize: '10px' }}>Seat Number: C3, C4</span>
                         <span className="pb-1" style={{ fontSize: '10px', color: 'rgba(255, 255, 255, 0.37)' }}>Buffet Products: None ( $0 )</span>
                         <span style={{ fontSize: '10px', color: 'rgba(255, 255, 255, 0.37)' }}>Movie Theatre: Cinema Village</span>

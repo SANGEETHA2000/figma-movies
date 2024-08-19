@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useState } from 'react';
 import homeBackground from '../assets/home_background.png';
 import buyTickets1 from '../assets/buyTickets/image 1.png';
 import vector from '../assets/buyTickets/Vector.png';
@@ -8,16 +8,42 @@ import arrow2 from '../assets/buyTickets/Arrow 1.png';
 import arrow1 from '../assets/buyTickets/Arrow 2.png';
 import { useNavigate } from 'react-router-dom';
 
-
 const BuyTickets = () => {
 
     const navigate = useNavigate();
     const onNextClicked = () => {
-        navigate('/ticket-details')
+        const sessionName = sessionOptions.includes(selectedSessionValue) ? selectedSessionValue : '20.30 pm - 22.00pm';
+        navigate('/ticket-details', {state : {sessionName: sessionName}})
     }
     const onBackClicked = () => {
         navigate('/movie-details')
     }
+
+    const [isTheatreOpen, setisTheatreOpen] = useState(false);
+    const [selectedTheatreValue, setselectedTheatreValue] = useState('Choose a Movie Theatre *');
+    const [isSessionOpen, setisSessionOpen] = useState(false);
+    const [selectedSessionValue, setselectedSessionValue] = useState('Select Session *');
+
+    const theatreOptions = ['Theatre 1', 'Theatre 2', 'Theatre 3', 'Theatre 4'];
+    const sessionOptions = ['Session 1', 'Session 2', 'Session 3', 'Session 4'];
+
+    const toggleTheatreDropdown = () => {
+        setisTheatreOpen(!isTheatreOpen);
+    };
+
+    const handleTheatreSelect = (option) => {
+        setselectedTheatreValue(option);
+        setisTheatreOpen(false);
+    };
+
+    const toggleSessionDropdown = () => {
+        setisSessionOpen(!isSessionOpen);
+    };
+
+    const handleSessionSelect = (option) => {
+        setselectedSessionValue(option);
+        setisSessionOpen(false);
+    };
 
     return (
         <div className='flex flex-col border justify-between relative' style={{ backgroundColor:'#0D0D0F', backgroundImage: `url(${homeBackground})`, height: '852px', width: '393px', fontFamily: "Inter" }}>
@@ -37,14 +63,42 @@ const BuyTickets = () => {
                     <img src={exchange} alt="exchange" className='rounded-xl h-5 w-5'/>
                 </div>
                 <span className='text-white font-extralight pb-4' style={{ fontSize: '13px' }}>You need to select the mandatory fields (*) to proceed to the checkout page.</span>
-                <button className='rounded-xl bg-transparent border-4 flex flex-row justify-between items-center pl-12 pr-6' style={{ borderColor: 'rgba(108, 71, 219)', height : '65px', width: '351px', color:'rgba(108, 71, 219)' }}>
-                    <span className='text-sm font-semibold'>Choose a Movie Theatre *</span>
+                <button className='rounded-xl bg-transparent border-4 flex flex-row justify-between items-center pl-12 pr-6' style={{ borderColor: 'rgba(108, 71, 219)', height : '65px', width: '351px', color:'rgba(108, 71, 219)' }} onClick={toggleTheatreDropdown}>
+                    <span className='text-sm font-semibold'>{selectedTheatreValue}</span>
                     <img src={arrow1} alt="arrow1"/>
                 </button>
-                <button className='rounded-xl bg-transparent border-4 flex flex-row justify-between items-center pl-12 pr-6' style={{ borderColor: 'rgba(108, 71, 219)', height : '65px', width: '351px', color:'rgba(108, 71, 219)' }}>
-                    <span className='text-sm font-semibold'>Select Session *</span>
+                {isTheatreOpen && (
+                    <ul className="absolute text-white rounded-lg max-h-60 overflow-y-auto z-10"
+                        style={{ top: '462px', left: '20px', width: '355px', backgroundColor: 'rgba(108, 71, 219)' }}>
+                        {theatreOptions.map((option) => (
+                            <li
+                                key={option}
+                                className="px-4 py-2 cursor-pointer  opacity-70 hover:opacity-100"
+                                onClick={() => handleTheatreSelect(option)}
+                            >
+                            {option}
+                            </li>
+                        ))}
+                    </ul>
+                )}
+                <button className='rounded-xl bg-transparent border-4 flex flex-row justify-between items-center pl-12 pr-6' style={{ borderColor: 'rgba(108, 71, 219)', height : '65px', width: '351px', color:'rgba(108, 71, 219)' }} onClick={toggleSessionDropdown}>
+                    <span className='text-sm font-semibold'>{selectedSessionValue}</span>
                     <img src={arrow1} alt="arrow1"/>
                 </button>
+                {isSessionOpen && (
+                    <ul className="absolute text-white rounded-lg max-h-60 overflow-y-auto z-10"
+                        style={{ top: '548px', left: '20px', width: '355px', backgroundColor: 'rgba(108, 71, 219)' }}>
+                        {sessionOptions.map((option) => (
+                            <li
+                                key={option}
+                                className="px-4 py-2 cursor-pointer  opacity-70 hover:opacity-100"
+                                onClick={() => handleSessionSelect(option)}
+                            >
+                            {option}
+                            </li>
+                        ))}
+                    </ul>
+                )}
                 <button className='rounded-xl bg-transparent border-4 flex flex-row justify-between items-center pl-12 pr-6' style={{ borderColor: 'rgba(108, 71, 219)', height : '65px', width: '351px', color:'rgba(108, 71, 219)' }}>
                     <span className='text-sm font-semibold'>Buffet Products</span>
                     <img src={arrow1} alt="arrow1"/>
