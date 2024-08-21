@@ -22,6 +22,7 @@ function App() {
           <Route path="/ticket-details" element={<TicketDetails />} />
           <Route path="/payment-status" element={<PaymentStatus />} />
           <Route path="/view-ticket" element={<ViewTicket />} />
+          <Route path="*" element={<Landing />} />
         </Routes>
       </BrowserRouter>
     </div>
